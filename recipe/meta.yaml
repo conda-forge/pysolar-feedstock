@@ -27,7 +27,7 @@ requirements:
 
 test:
   imports:
-    - Pysolar
+    - pysolar
 
 about:
   home: http://pysolar.org/
