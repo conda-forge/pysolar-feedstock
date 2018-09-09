@@ -1,5 +1,5 @@
 {% set name = "pysolar" %}
-{% set version = "0.8-RC1" %}
+{% set version = "0.8rc1" %}
 {% set sha256 = "83a860e6d631cae95f6cc16598f9af707ebebf70172182acf93e486053edf03d" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/pingswept/pysolar/archive/{{ version }}.tar.gz
+  url: https://github.com/pingswept/pysolar/archive/0.8-RC1.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -19,9 +19,9 @@ build:
 requirements:
   host:
     - pip
-    - python >= 3.5
+    - python >=3.5
   run:
-    - python >= 3.5
+    - python >=3.5
     - numpy
     - pytz
 
