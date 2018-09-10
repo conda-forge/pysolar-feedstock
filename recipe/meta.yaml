@@ -1,32 +1,30 @@
-{% set name = "pysolar" %}
-{% set version = "0.6" %}
-{% set sha256 = "244a6f3287a4483b78b705f14057bd48f27bcac2b25bef3a16d0449b9fa05f6e" %}
+{% set version = "0.7" %}
 
 package:
-  name: {{ name|lower }}
+  name: pysolar
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/pingswept/pysolar/archive/0.6.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/pingswept/pysolar/archive/{{ version }}.tar.gz
+  sha256: e0ffef84197116a3172055505df34bc9620fd05809cbeaa14edc85fa07161f54
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - pip
+    - python >=3.5
   run:
-    - python
+    - python >=3.5
     - numpy
     - pytz
 
 test:
   imports:
-    - Pysolar
+    - pysolar
 
 about:
   home: http://pysolar.org/
