@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/pingswept/pysolar/archive/0.8-RC1.tar.gz
+  url: https://github.com/pingswept/pysolar/archive/{{ version }}.tar.gz
   sha256: e0ffef84197116a3172055505df34bc9620fd05809cbeaa14edc85fa07161f54
 
 build:
