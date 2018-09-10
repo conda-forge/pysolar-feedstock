@@ -1,20 +1,17 @@
-{% set name = "pysolar" %}
-{% set version = "0.8rc1" %}
-{% set sha256 = "83a860e6d631cae95f6cc16598f9af707ebebf70172182acf93e486053edf03d" %}
+{% set version = "0.7" %}
 
 package:
-  name: {{ name|lower }}
+  name: pysolar
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/pingswept/pysolar/archive/0.8-RC1.tar.gz
-  sha256: {{ sha256 }}
+  sha256: e0ffef84197116a3172055505df34bc9620fd05809cbeaa14edc85fa07161f54
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
   noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
 requirements:
   host:
