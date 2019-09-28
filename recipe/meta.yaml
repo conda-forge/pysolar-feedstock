@@ -30,6 +30,7 @@ about:
   home: http://pysolar.org/
   license: GPL-3.0
   license_family: GPL
+  license_file: COPYING
   summary: 'A collection of Python libraries for simulating the irradiation of any point on earth by the sun'
   description: |
     Pysolar is a collection of Python libraries for simulating the irradiation of any point on earth by the sun.
