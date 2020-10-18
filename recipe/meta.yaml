@@ -1,4 +1,4 @@
-{% set version = "0.8" %}
+{% set version = "0.9" %}
 
 package:
   name: pysolar
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/pingswept/pysolar/archive/{{ version }}.tar.gz
-  sha256: 788982dd058d0a7581f09706b937bc1992cbaaa7662c430c4bf26190e5e7d29c
+  sha256: 70538e75ea82349f3701bb7d5ec191bbb3e5f8fac673bbc15f4e82e47483d492
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv
 
 requirements:
   host:
@@ -29,8 +29,9 @@ test:
 about:
   home: http://pysolar.org/
   license: GPL-3.0
+  license_file: COPYING
   license_family: GPL
-  summary: 'A collection of Python libraries for simulating the irradiation of any point on earth by the sun'
+  summary: A collection of Python libraries for simulating the irradiation of any point on earth by the sun
   description: |
     Pysolar is a collection of Python libraries for simulating the irradiation of any point on earth by the sun.
     It includes code for extremely precise ephemeris calculations, and more.
